@@ -29,8 +29,8 @@ xShell收费，FinalShell太慢，自己用Go语言开发一个简单易用的 S
                 
 <br><b>4) <font color=red>sh.exe</font>> : SSH主程序，带一个参数<br></b>
 &nbsp;&nbsp;&nbsp;&nbsp;用法： > sh.exe config_file (不带扩展名)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;案例： > sh.exe demo1 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自动加载 config 目录下的 demo1.json 配置文件，并连接SSH<br>
+&nbsp;&nbsp;&nbsp;&nbsp;案例： > sh.exe artcube <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自动加载 config 目录下的 artcube.json 配置文件，并连接SSH<br>
 
-<img scr="demo.jpg">
+<img src="demo.jpg">
 		
