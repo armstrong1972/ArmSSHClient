@@ -1,0 +1,6 @@
+{
+    "mod"  : "pem",
+    "addr" : "15.15.15.15:22",
+    "user" : "ec2-user",
+    "cipher" : "aws.pem"
+}
