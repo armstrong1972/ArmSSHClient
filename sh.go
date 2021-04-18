@@ -11,6 +11,7 @@ import (
 	"strings"
 
 	"golang.org/x/crypto/ssh"
+	"golang.org/x/crypto/ssh/terminal"
 )
 
 type SshConfig struct {
@@ -114,6 +115,15 @@ func ConnetSSH(sshC SshConfig) {
 	if err != nil {
 		log.Fatalf("new session error: %s", err.Error())
 	}
+	defer session.Close()
+
+	// Fixed Ctrl+C to exit app
+	fd := int(os.Stdin.Fd())
+	oldState, err := terminal.MakeRaw(fd)
+	if err != nil {
+		panic(err)
+	}
+	defer terminal.Restore(fd, oldState)
 
 	session.Stdout = os.Stdout // 会话输出关联到系统标准输出设备
 	session.Stderr = os.Stderr // 会话错误输出关联到系统标准错误输出设备
